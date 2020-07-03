@@ -31,12 +31,15 @@ namespace Setting
 
       Configuration config = ConfigurationManager.OpenExeConfiguration(System.Reflection.Assembly.GetExecutingAssembly().Location);
       val = config.AppSettings.Settings[Key]?.Value;
-      
-      if (val != null)
-        cache.Add(Key, val, policy);
 
-      //Zurückgeben der dem Key zugehörigen Value
-      return new Setting { Key = Key, Value = val };
+      if (val != null)
+      {
+        cache.Add(Key, val, policy);
+        //Zurückgeben der dem Key zugehörigen Value
+        return new Setting { Key = Key, Value = val };
+      }
+
+      return null;
     }
 
     public bool SetSetting(Setting Setting, Mode Mode = Mode.Static, int ExpirationTime = 10)
