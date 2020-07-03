@@ -1,4 +1,4 @@
-﻿namespace LocalSetting
+﻿namespace Setting
 {
   public enum Mode
   {

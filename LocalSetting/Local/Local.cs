@@ -2,9 +2,9 @@
 using System.Configuration;
 using System.Runtime.Caching;
 
-namespace LocalSetting
+namespace Setting
 {
-  public class LocalSettings : ISetting
+  public class Local : ISetting
   {
     private string lastError = string.Empty;
     public string GetLastError()

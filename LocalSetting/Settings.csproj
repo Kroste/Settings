@@ -44,7 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ISetting.cs" />
-    <Compile Include="LocalSetting\LocalSetting.cs" />
+    <Compile Include="Local\Local.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Setting.cs" />
   </ItemGroup>
